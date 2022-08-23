@@ -1,5 +1,6 @@
 package cn.ofpp;
 
+import cn.ofpp.core.BoyFriend;
 import cn.ofpp.core.GirlFriend;
 import cn.ofpp.core.MessageFactory;
 import cn.ofpp.core.Wx;
@@ -27,14 +28,14 @@ public class Application {
         // -----------------  以下为演示数据  ------------------------
 
         // new 一个 女友
-        GirlFriend girlFriend = new GirlFriend("亲爱的baby",
-                "广西省", "柳州市", "1996-11-26","2022-03-01", "o5OH4594sIjMTzuAwxZMMkvJs_gc");
-        Wx.sendTemplateMessage(MessageFactory.resolveMessage(girlFriend));
+        //GirlFriend girlFriend = new GirlFriend("亲爱的baby",
+        //        "广西省", "柳州市", "1996-11-26","2022-03-01", "o5OH4594sIjMTzuAwxZMMkvJs_gc");
+        //Wx.sendTemplateMessage(MessageFactory.resolveMessage(girlFriend));
 
          //new 一个 男友 也可单独针对一个friend设置模板ID 以达到不同人不同消息
-        //BoyFriend boyFriend = new BoyFriend("谢小卫",
-        //        "上海省", "上海市", "1998-02-08","2022-03-01", "o5OH456xrZZ_qLam4H488LE3rnIg");
-        //Wx.sendTemplateMessage(MessageFactory.resolveMessage(boyFriend));
+        BoyFriend boyFriend = new BoyFriend("谢小卫",
+                "上海省", "上海市", "1998-02-08","2022-03-01", "o5OH456xrZZ_qLam4H488LE3rnIg");
+        Wx.sendTemplateMessage(MessageFactory.resolveMessage(boyFriend));
         System.out.println("------end------");
     }
 
